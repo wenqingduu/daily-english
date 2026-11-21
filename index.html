@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="每日英语：看中文，点击显示英文，听朗读，回顾往日练习。">
+<title>每日英语</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#212121;background:#fff}
+*{box-sizing:border-box}body{margin:0}button,select{font:inherit}
+.wrap{max-width:760px;margin:auto;padding:0 22px}
+header{border-bottom:1px solid #e9e9e9}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:74px;flex-wrap:wrap}
+h1{font-size:20px;margin:0;font-weight:650;letter-spacing:.3px}
+nav{display:flex;gap:22px}nav button{border:0;background:none;color:#707070;padding:10px 0;cursor:pointer;border-bottom:2px solid transparent}
+nav button.active{color:#161616;border-color:#161616}
+main{padding-top:36px!important;padding-bottom:70px!important}
+.meta{font-size:13px;color:#858585}h2{font-size:28px;margin:12px 0 18px;font-weight:680}
+.voicebar{display:flex;align-items:center;gap:9px;color:#666;font-size:13px;margin:10px 0 29px;flex-wrap:wrap}
+.voicebar select{border:1px solid #e2e2e2;background:white;border-radius:5px;padding:5px 6px;max-width:210px;color:#555}
+h3.section{color:#777;font-size:13px;margin:32px 0 16px;font-weight:500}
+.zh{font-size:16px;line-height:1.9;margin:0;cursor:pointer}
+.reveal{font-size:14px;border:0;background:none;color:#636363;padding:7px 0;cursor:pointer}
+.reveal:hover,.speak:hover{color:#111;text-decoration:underline}
+.details[hidden],section[hidden]{display:none!important}
+.en{font-size:16px;line-height:1.8;margin:12px 0 4px}
+.speak{color:#555;background:none;padding:4px 0;border:0;cursor:pointer;font-size:14px}
+.answer{border-top:1px solid #efefef;padding:20px 0 15px}
+.answer h4{font-size:15px;font-weight:620;margin:0 0 10px}
+.notes{font-size:14px;line-height:1.9;margin-top:16px}
+.notes-title{font-weight:600;color:#555;margin-bottom:6px}
+.notes p{margin:5px 0}
+.actions{padding-top:20px;border-top:1px solid #efefef;margin-top:16px}
+.actions button{padding:9px 16px;border:1px solid #dcdcdc;border-radius:6px;background:#fff;cursor:pointer}
+.actions button.done{color:#247248;border-color:#cde4d6}
+.historyRow{width:100%;background:#fff;border:0;border-bottom:1px solid #eee;display:flex;justify-content:space-between;gap:12px;align-items:center;text-align:left;padding:17px 0;cursor:pointer}
+.historyRow:hover{text-decoration:underline}.historyRow small{color:#888;white-space:nowrap}
+#history h2{font-size:23px}.error{color:#7a4242;line-height:1.7}
+@media(max-width:520px){header .wrap{min-height:65px}nav{gap:14px}nav button{font-size:13px}h1{font-size:18px}h2{font-size:25px}main{padding-top:27px!important}.historyRow{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>每日英语</h1><nav aria-label="练习导航"><button id="todayTab" class="active" type="button">今日练习</button><button id="historyTab" type="button">往日练习</button></nav></div></header>
+<main class="wrap">
+<section id="today">
+<div class="meta" id="meta"></div>
+<h2 id="title">正在读取课程…</h2>
+<div class="voicebar"><span>发音</span><select id="voice" aria-label="朗读声音"><option value="auto">推荐声音</option></select><span>语速</span><select id="rate" aria-label="语速"><option value="0.85">慢速</option><option value="1" selected>正常</option><option value="1.12">稍快</option></select></div>
+<h3 class="section">问题</h3><div id="question"></div>
+<h3 class="section">参考回答</h3><div id="answers"></div>
+<div class="actions"><button id="done" type="button">标记已学</button></div>
+</section>
+<section id="history" hidden><h2>往日练习</h2><div id="historyList"></div></section>
+</main>
+<script>
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id);
+let lessons=[],current=null,voices=[];
+let done=new Set();
+try{done=new Set(JSON.parse(localStorage.getItem('english-done')||'[]'))}catch{}
+const esc=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const today=()=>{const a=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const p=Object.fromEntries(a.map(x=>[x.type,x.value]));return p.year+'-'+p.month+'-'+p.day;};
+const latest=()=>[...lessons].reverse().find(x=>x.date<=today())||lessons[lessons.length-1];
+function stop(){if('speechSynthesis' in window)speechSynthesis.cancel()}
+function voiceScore(v){let s=/^en-US$/i.test(v.lang)?80:/^en[-_]/i.test(v.lang)?50:0;
+const n=v.name.toLowerCase();if(/natural|neural|premium|enhanced|siri/.test(n))s+=120;
+if(/google us english|ava|aria|jenny|samantha|allison|serena/.test(n))s+=65;
+if(/compact|espeak|festival/.test(n))s-=200;return s;}
+function refreshVoices(){if(!('speechSynthesis' in window)){$('voice').disabled=true;return}
+const prior=$('voice').selectedOptions[0]?.dataset?.name;
+voices=speechSynthesis.getVoices().filter(v=>/^en([-_]|$)/i.test(v.lang)).sort((a,b)=>voiceScore(b)-voiceScore(a));
+$('voice').replaceChildren(new Option('推荐声音','auto'),...voices.map((v,i)=>{const x=new Option(v.name+' ('+v.lang+')',String(i));x.dataset.name=v.name;return x}));
+const idx=voices.findIndex(v=>v.name===prior);if(idx>=0)$('voice').value=String(idx);
+}
+function speak(text){if(!('speechSynthesis' in window)){alert('此浏览器不支持朗读');return}
+stop();const u=new SpeechSynthesisUtterance(String(text));const chosen=$('voice').value;
+const v=chosen==='auto'?voices[0]:voices[Number(chosen)];if(v)u.voice=v;
+u.lang=v?.lang||'en-US';u.rate=Number($('rate').value)||1;u.pitch=1;speechSynthesis.speak(u);}
+function unit(zh,en,notes){const el=document.createElement('div');
+el.innerHTML='<p class="zh" title="点击查看英文">'+esc(zh)+'</p><button class="reveal" type="button" aria-expanded="false">查看英文</button><div class="details" hidden><p class="en">'+esc(en)+'</p><button class="speak" type="button">▶ 朗读英文</button>'+(notes?'<div class="notes"><div class="notes-title">表达点拨</div>'+notes.map(n=>'<p><strong>'+esc(n.term)+'</strong>：'+esc(n.explanation_zh)+'</p>').join('')+'</div>':'')+'</div>';
+const btn=el.querySelector('.reveal'),details=el.querySelector('.details');
+btn.addEventListener('click',()=>{details.hidden=!details.hidden;btn.textContent=details.hidden?'查看英文':'收起英文';btn.setAttribute('aria-expanded',String(!details.hidden));if(details.hidden)stop()});
+el.querySelector('.zh').addEventListener('click',()=>btn.click());
+el.querySelector('.speak').addEventListener('click',()=>speak(en));
+return el;}
+function renderLesson(x){if(!x)return;stop();current=x;$('meta').textContent='Day '+x.day+'  ·  '+x.date;
+$('title').textContent=x.topic_zh;
+$('question').replaceChildren(unit(x.question_zh,x.question_en));
+$('answers').replaceChildren(...x.options.map((o,i)=>{const a=document.createElement('article');a.className='answer';const h=document.createElement('h4');h.textContent=(i+1)+'. '+o.title_zh;a.append(h,unit(o.answer_zh,o.answer_en,o.notes||[]));return a}));
+$('done').textContent=done.has(x.day)?'✓ 已学':'标记已学';$('done').classList.toggle('done',done.has(x.day));
+}
+function switchTab(name){$('today').hidden=name!=='today';$('history').hidden=name!=='history';
+$('todayTab').classList.toggle('active',name==='today');$('historyTab').classList.toggle('active',name==='history');
+if(name==='today')renderLesson(latest());else renderHistory();}
+function renderHistory(){const list=$('historyList');list.replaceChildren();
+for(const x of [...lessons].reverse()){
+const b=document.createElement('button');b.className='historyRow';b.type='button';
+const s=document.createElement('span');s.textContent='Day '+x.day+' · '+x.topic_zh;
+const d=document.createElement('small');d.textContent=x.date+(done.has(x.day)?' · 已学':'');
+b.append(s,d);b.addEventListener('click',()=>{switchTab('today');renderLesson(x);window.scrollTo(0,0)});list.append(b);}
+}
+$('todayTab').addEventListener('click',()=>switchTab('today'));
+$('historyTab').addEventListener('click',()=>switchTab('history'));
+$('done').addEventListener('click',()=>{if(!current)return;done.has(current.day)?done.delete(current.day):done.add(current.day);
+try{localStorage.setItem('english-done',JSON.stringify([...done]))}catch{}
+renderLesson(current);});
+$('voice').addEventListener('change',stop);$('rate').addEventListener('change',stop);
+if('speechSynthesis' in window){refreshVoices();speechSynthesis.addEventListener?.('voiceschanged',refreshVoices);window.addEventListener('pagehide',stop);}
+(async()=>{try{const r=await fetch('./lessons.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('读取失败');
+const arr=await r.json();if(!Array.isArray(arr))throw Error('课程格式错误');
+const valid=arr.filter(x=>Number.isInteger(x.day)&&x.date&&x.topic_zh&&x.question_zh&&x.question_en&&Array.isArray(x.options)&&x.options.length===3);
+const uniq=new Map(valid.map(x=>[x.day,x]));lessons=[...uniq.values()].sort((a,b)=>a.day-b.day);
+if(!lessons.length)throw Error('课程为空');renderLesson(latest());
+}catch(e){$('title').textContent='暂时无法读取课程';$('question').textContent='请刷新页面稍后重试。';$('answers').replaceChildren();$('done').hidden=true;}})();
+})();
+</script>
+</body>
+</html>
