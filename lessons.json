@@ -68,5 +68,75 @@
         ]
       }
     ]
+  },
+  {
+    "day": 2,
+    "date": "2026-11-22",
+    "topic_en": "Morning Routines & Breakfast",
+    "topic_zh": "早晨习惯与早餐",
+    "question_en": "What does your morning routine usually look like? Do you have time to eat breakfast before you head out?",
+    "question_zh": "你早上通常都怎么安排？出门前有时间吃早餐吗？",
+    "options": [
+      {
+        "title_en": "A Relaxed Start",
+        "title_zh": "从容开启一天",
+        "answer_en": "I usually get up around seven and give myself a little time to wake up properly. I make myself a cup of coffee, put together a quick breakfast, and check my schedule for the day. I find that having a calm morning puts me in a much better mood, even when I have a lot on my plate.",
+        "answer_zh": "我通常七点左右起床，给自己一点时间彻底清醒过来。我会给自己泡杯咖啡，简单做份早餐，再看看当天的日程。我发现，早晨从容一点会让我心情好很多，即使有一大堆事情要忙也是如此。",
+        "notes": [
+          {
+            "term": "give myself a little time to...",
+            "explanation_zh": "给自己留一点时间去做某事。give someone time to do something 是很自然的搭配。例如：Give yourself some time to adjust.（给自己一点时间适应。）"
+          },
+          {
+            "term": "put together a quick breakfast",
+            "explanation_zh": "put together 在这里指用现有材料快速准备、拼凑出一份早餐，比 cook breakfast 更强调简单省事。"
+          },
+          {
+            "term": "have a lot on my plate",
+            "explanation_zh": "字面意思是盘子里有很多东西，口语里表示手头事情很多、忙不过来。例如：I've got a lot on my plate this week."
+          }
+        ]
+      },
+      {
+        "title_en": "A Busy Morning",
+        "title_zh": "忙忙碌碌的早晨",
+        "answer_en": "To be honest, my mornings are usually pretty chaotic. I tend to hit the snooze button a few times, so I end up rushing out the door. Most days, I just grab a sandwich on my way to work. I'm trying to get into the habit of going to bed earlier so I can stop feeling so rushed.",
+        "answer_zh": "说实话，我的早晨通常都有点手忙脚乱。我总会按好几次闹钟的贪睡键，结果最后只能匆匆忙忙地出门。大多数时候，我就在上班路上随便买个三明治。我正努力养成早点睡觉的习惯，这样早上就不会总觉得这么赶。",
+        "notes": [
+          {
+            "term": "tend to...",
+            "explanation_zh": "表示“往往会……／通常容易……”，用来描述某种习惯或倾向。例如：I tend to stay up late.（我经常熬夜。）"
+          },
+          {
+            "term": "end up doing something",
+            "explanation_zh": "表示“结果最后还是做了某事”，常常带有事情并非原计划的意味。end up 后接动词 -ing。例如：We ended up taking a taxi."
+          },
+          {
+            "term": "get into the habit of doing something",
+            "explanation_zh": "表示“逐渐养成做某事的习惯”。介词 of 后面接动名词，例如：get into the habit of reading every day."
+          }
+        ]
+      },
+      {
+        "title_en": "Working from Home",
+        "title_zh": "居家办公的早晨",
+        "answer_en": "Since I work from home, I don't have to commute, which makes mornings a lot less stressful. I usually stretch for ten minutes, make some oatmeal, and ease into the day by checking my emails. Once I've figured out my priorities, I get straight to work. It's a routine that helps me stay focused without feeling overwhelmed.",
+        "answer_zh": "因为我在家办公，不用通勤，所以早上轻松多了。我通常先拉伸十分钟，煮点燕麦粥，然后从查看邮件开始，慢慢进入一天的状态。一旦理清了事情的轻重缓急，我就马上开始工作。这个习惯能让我保持专注，又不会觉得压力大到喘不过气。",
+        "notes": [
+          {
+            "term": "which makes mornings a lot less stressful",
+            "explanation_zh": "这里的 which 引导非限制性定语从句，指代前面“不用通勤”这件事，说明它带来的结果。a lot 可加强比较级 less 的程度。"
+          },
+          {
+            "term": "ease into the day",
+            "explanation_zh": "ease into 表示“慢慢进入、逐渐适应”，这里指不匆忙地开始一天。也可以说 ease into a new routine（慢慢适应新作息）。"
+          },
+          {
+            "term": "get straight to work",
+            "explanation_zh": "表示“直接开始工作、马上投入工作”；straight to 强调不拖延、不绕弯。例如：After breakfast, I get straight to work."
+          }
+        ]
+      }
+    ]
   }
 ]
