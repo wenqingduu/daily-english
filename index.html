@@ -18,7 +18,7 @@ nav button.active{color:#161616;border-color:#161616}
 main{padding-top:36px!important;padding-bottom:70px!important}
 .meta{font-size:13px;color:#858585}h2{font-size:28px;margin:12px 0 18px;font-weight:680}
 .voicebar{display:flex;align-items:center;gap:9px;color:#666;font-size:13px;margin:10px 0 29px;flex-wrap:wrap}
-.voicebar select{border:1px solid #e2e2e2;background:white;border-radius:5px;padding:5px 6px;max-width:210px;color:#555}
+.voicebar select{border:1px solid #e2e2e2;background:white;border-radius:5px;padding:5px 6px;max-width:210px;color:#555}.voicebar button{background:none;border:0;color:#555;cursor:pointer;padding:5px 2px}.voicebar button:hover{text-decoration:underline}
 h3.section{color:#777;font-size:13px;margin:32px 0 16px;font-weight:500}
 .zh{font-size:16px;line-height:1.9;margin:0;cursor:pointer}
 .reveal{font-size:14px;border:0;background:none;color:#636363;padding:7px 0;cursor:pointer}
@@ -46,7 +46,7 @@ h3.section{color:#777;font-size:13px;margin:32px 0 16px;font-weight:500}
 <section id="today">
 <div class="meta" id="meta"></div>
 <h2 id="title">正在读取课程…</h2>
-<div class="voicebar"><span>发音</span><select id="voice" aria-label="朗读声音"><option value="auto">推荐声音</option></select><span>语速</span><select id="rate" aria-label="语速"><option value="0.85">慢速</option><option value="1" selected>正常</option><option value="1.12">稍快</option></select></div>
+<div class="voicebar"><span>发音</span><select id="voice" aria-label="朗读声音"><option value="auto">本机优先</option></select><button id="voiceTest" type="button" title="试听当前声音">试听</button><span>语速</span><select id="rate" aria-label="语速"><option value="0.85">慢速</option><option value="1" selected>正常</option><option value="1.12">稍快</option></select></div>
 <h3 class="section">问题</h3><div id="question"></div>
 <h3 class="section">参考回答</h3><div id="answers"></div>
 <div class="actions"><button id="done" type="button">标记已学</button></div>
@@ -64,20 +64,29 @@ const esc=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const today=()=>{const a=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const p=Object.fromEntries(a.map(x=>[x.type,x.value]));return p.year+'-'+p.month+'-'+p.day;};
 const latest=()=>lessons[lessons.length-1];
 function stop(){if('speechSynthesis' in window)speechSynthesis.cancel()}
-function voiceScore(v){let s=/^en-US$/i.test(v.lang)?80:/^en[-_]/i.test(v.lang)?50:0;
-const n=v.name.toLowerCase();if(/natural|neural|premium|enhanced|siri/.test(n))s+=120;
-if(/google us english|ava|aria|jenny|samantha|allison|serena/.test(n))s+=65;
-if(/compact|espeak|festival/.test(n))s-=200;return s;}
-function refreshVoices(){if(!('speechSynthesis' in window)){$('voice').disabled=true;return}
-const prior=$('voice').selectedOptions[0]?.dataset?.name;
+// Prefer on-device English voices to avoid audio artefacts from streamed voices.
+function voiceScore(v){let s=v.localService?300:0;
+s+=/^en-US$/i.test(v.lang)?80:/^en[-_]/i.test(v.lang)?50:0;
+const n=v.name.toLowerCase();
+if(/premium|enhanced|siri|natural|neural/.test(n))s+=65;
+if(/ava|samantha|allison|serena|jenny/.test(n))s+=35;
+if(/compact|espeak|festival/.test(n))s-=250;
+return s;
+}
+function voiceKey(v){return v.name+'|'+v.lang}
+function refreshVoices(){if(!('speechSynthesis' in window)){$('voice').disabled=true;$('voiceTest').disabled=true;return}
+let preferred='';
+try{preferred=localStorage.getItem('english-voice')||''}catch{}
+const prior=$('voice').selectedOptions[0]?.dataset?.key||preferred;
 voices=speechSynthesis.getVoices().filter(v=>/^en([-_]|$)/i.test(v.lang)).sort((a,b)=>voiceScore(b)-voiceScore(a));
-$('voice').replaceChildren(new Option('推荐声音','auto'),...voices.map((v,i)=>{const x=new Option(v.name+' ('+v.lang+')',String(i));x.dataset.name=v.name;return x}));
-const idx=voices.findIndex(v=>v.name===prior);if(idx>=0)$('voice').value=String(idx);
+$('voice').replaceChildren(new Option('本机优先','auto'),...voices.map((v,i)=>{const x=new Option(v.name+' ('+v.lang+')'+(v.localService?' · 本机':''),String(i));x.dataset.key=voiceKey(v);return x}));
+const idx=voices.findIndex(v=>voiceKey(v)===prior);if(idx>=0)$('voice').value=String(idx);
 }
 function speak(text){if(!('speechSynthesis' in window)){alert('此浏览器不支持朗读');return}
 stop();const u=new SpeechSynthesisUtterance(String(text));const chosen=$('voice').value;
 const v=chosen==='auto'?voices[0]:voices[Number(chosen)];if(v)u.voice=v;
-u.lang=v?.lang||'en-US';u.rate=Number($('rate').value)||1;u.pitch=1;speechSynthesis.speak(u);}
+u.lang=v?.lang||'en-US';u.rate=Number($('rate').value)||1;u.pitch=1;u.volume=0.82;
+speechSynthesis.speak(u);}
 function unit(zh,en,notes){const el=document.createElement('div');
 el.innerHTML='<p class="zh" title="点击查看英文">'+esc(zh)+'</p><button class="reveal" type="button" aria-expanded="false">查看英文</button><div class="details" hidden><p class="en">'+esc(en)+'</p><button class="speak" type="button">▶ 朗读英文</button>'+(notes?'<div class="notes"><div class="notes-title">表达点拨</div>'+notes.map(n=>'<p><strong>'+esc(n.term)+'</strong>：'+esc(n.explanation_zh)+'</p>').join('')+'</div>':'')+'</div>';
 const btn=el.querySelector('.reveal'),details=el.querySelector('.details');
@@ -106,7 +115,9 @@ $('historyTab').addEventListener('click',()=>switchTab('history'));
 $('done').addEventListener('click',()=>{if(!current)return;done.has(current.day)?done.delete(current.day):done.add(current.day);
 try{localStorage.setItem('english-done',JSON.stringify([...done]))}catch{}
 renderLesson(current);});
-$('voice').addEventListener('change',stop);$('rate').addEventListener('change',stop);
+$('voice').addEventListener('change',()=>{stop();try{const v=voices[Number($('voice').value)];localStorage.setItem('english-voice',$('voice').value==='auto'?'':voiceKey(v))}catch{}});
+$('voiceTest').addEventListener('click',()=>speak('Good morning! I hope you have a wonderful day.'));
+$('rate').addEventListener('change',stop);
 if('speechSynthesis' in window){refreshVoices();speechSynthesis.addEventListener?.('voiceschanged',refreshVoices);window.addEventListener('pagehide',stop);}
 (async()=>{try{const r=await fetch('./lessons.json?v='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error('读取失败');
 const arr=await r.json();if(!Array.isArray(arr))throw Error('课程格式错误');
