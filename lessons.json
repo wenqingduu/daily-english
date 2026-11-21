@@ -1,0 +1,72 @@
+[
+  {
+    "day": 1,
+    "date": "2026-11-21",
+    "topic_en": "Weather & Daily Plans",
+    "topic_zh": "天气与日常安排",
+    "question_en": "How's the weather outside today? And do you have any fun plans for the evening?",
+    "question_zh": "今天外面天气怎么样？你晚上有什么有趣的计划吗？",
+    "options": [
+      {
+        "title_en": "Weather & Relaxing",
+        "title_zh": "侧重天气与放松",
+        "answer_en": "It's actually quite chilly and windy today, so I'm wearing a heavy coat. As for the evening, I don't have anything big planned. I'm just planning to order some takeout, maybe some noodles, and binge-watch a new series on Netflix to unwind after a long day.",
+        "answer_zh": "今天外面其实挺冷的，风也很大，所以我穿了厚外套。至于晚上，没什么大计划。我打算点个外卖，可能吃碗面，然后在 Netflix 上追一部新剧，忙碌了一天之后放松一下。",
+        "notes": [
+          {
+            "term": "anything big planned",
+            "explanation_zh": "big 放在不定代词 anything 后面修饰；planned 是过去分词，表示已经安排好的事情。整个短语表示“什么大计划”。"
+          },
+          {
+            "term": "I'm just planning to...",
+            "explanation_zh": "现在进行时可用来表达近期正在考虑或安排的打算，语气自然随意。"
+          },
+          {
+            "term": "binge-watch",
+            "explanation_zh": "一口气连续刷很多集电视剧。例如：I binge-watched the whole season over the weekend."
+          }
+        ]
+      },
+      {
+        "title_en": "Socializing & Activity",
+        "title_zh": "侧重社交与活动",
+        "answer_en": "The weather is surprisingly nice! The sun is shining and it's not too hot. I'm actually meeting up with a couple of friends later. We're going to try that new hotpot place downtown, and hopefully, we can grab a bubble tea afterwards to catch up.",
+        "answer_zh": "天气出奇地好！阳光明媚，而且不太热。我晚些时候要见几个朋友。我们打算去市中心那家新开的火锅店尝尝，希望之后还能喝杯奶茶、聊聊近况。",
+        "notes": [
+          {
+            "term": "I'm actually meeting up with...",
+            "explanation_zh": "现在进行时表达已安排好的未来活动，尤其常用于约见朋友。"
+          },
+          {
+            "term": "grab a bubble tea",
+            "explanation_zh": "grab 在口语里有“顺便买/喝”的意思，轻松自然。"
+          },
+          {
+            "term": "catch up",
+            "explanation_zh": "这里指叙旧、聊近况。例如：Let's catch up over coffee."
+          }
+        ]
+      },
+      {
+        "title_en": "Work & Study",
+        "title_zh": "侧重工作与学习",
+        "answer_en": "It looks like it might rain later, so you might want to bring an umbrella. My evening is going to be pretty busy, unfortunately. I have to finish a report for work, and then I need to spend an hour practicing my English before going to bed.",
+        "answer_zh": "看起来晚些时候可能会下雨，你最好带把伞。不巧的是，我晚上会很忙。我得完成一份工作报告，然后睡前还要花一小时练习英语。",
+        "notes": [
+          {
+            "term": "It looks like...",
+            "explanation_zh": "表示“看起来好像……”，后面可直接接完整句子。"
+          },
+          {
+            "term": "you might want to...",
+            "explanation_zh": "表达委婉的建议，相当于“你或许可以考虑……”。"
+          },
+          {
+            "term": "spend time doing sth.",
+            "explanation_zh": "表示“花时间做某事”，spend 后接动名词，例如 spend an hour practicing English。"
+          }
+        ]
+      }
+    ]
+  }
+]
