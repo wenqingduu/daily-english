@@ -62,7 +62,7 @@ let done=new Set();
 try{done=new Set(JSON.parse(localStorage.getItem('english-done')||'[]'))}catch{}
 const esc=t=>String(t??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const today=()=>{const a=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const p=Object.fromEntries(a.map(x=>[x.type,x.value]));return p.year+'-'+p.month+'-'+p.day;};
-const latest=()=>[...lessons].reverse().find(x=>x.date<=today())||lessons[lessons.length-1];
+const latest=()=>lessons[lessons.length-1];
 function stop(){if('speechSynthesis' in window)speechSynthesis.cancel()}
 function voiceScore(v){let s=/^en-US$/i.test(v.lang)?80:/^en[-_]/i.test(v.lang)?50:0;
 const n=v.name.toLowerCase();if(/natural|neural|premium|enhanced|siri/.test(n))s+=120;
