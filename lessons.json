@@ -138,5 +138,87 @@
         ]
       }
     ]
+  },
+  {
+    "day": 3,
+    "date": "2026-11-22",
+    "topic_en": "Weekend Plans & Taking a Break",
+    "topic_zh": "周末安排与休息放松",
+    "question_en": "How do you usually spend your weekends? Do you prefer making plans or just going with the flow?",
+    "question_zh": "你通常怎么度过周末？你更喜欢提前安排好，还是顺其自然？",
+    "options": [
+      {
+        "title_en": "A Slow Weekend",
+        "title_zh": "悠闲放松型",
+        "answer_en": "I usually keep my weekends pretty low-key. After a busy week, I like sleeping in a little, making myself a nice breakfast, and catching up on a show I've been meaning to watch. I try not to pack my schedule too tightly because I need some downtime to recharge.",
+        "answer_zh": "我的周末通常过得比较悠闲。忙了一周之后，我喜欢稍微睡个懒觉、给自己做顿好吃的早餐，再补看一部一直想看的剧。我尽量不把日程排得太满，因为我需要一些休息时间恢复精力。",
+        "notes": [
+          {
+            "term": "keep something low-key",
+            "explanation_zh": "表示让某件事保持低调、简单、不折腾。keep my weekends low-key 就是周末安排得轻松一点。"
+          },
+          {
+            "term": "catch up on something",
+            "explanation_zh": "表示补上之前没来得及做的事，例如 catch up on sleep（补觉）或 catch up on a show（补剧）。"
+          },
+          {
+            "term": "I've been meaning to...",
+            "explanation_zh": "现在完成进行时，表示一直有这个打算，却还没付诸行动。例如：I've been meaning to call you.（我一直想给你打电话。）"
+          },
+          {
+            "term": "downtime to recharge",
+            "explanation_zh": "downtime 指休息、空闲时间；recharge 字面是充电，口语中指恢复精力。"
+          }
+        ]
+      },
+      {
+        "title_en": "Going Out with Friends",
+        "title_zh": "朋友聚会型",
+        "answer_en": "I prefer having at least one thing planned so I have something to look forward to. This weekend, I'm thinking of checking out a new café with a friend. We haven't seen each other in ages, so it'll be nice to catch up. Apart from that, I'll probably just go with the flow.",
+        "answer_zh": "我更喜欢至少提前安排一件事，这样就有个盼头。这个周末我打算和朋友去一家新咖啡馆看看。我们已经很久没见了，所以能聊聊近况应该挺开心的。除此之外，我大概就随性安排了。",
+        "notes": [
+          {
+            "term": "have something to look forward to",
+            "explanation_zh": "表示有值得期待的事情。look forward to 中的 to 是介词，后接名词或动名词。"
+          },
+          {
+            "term": "check out a new café",
+            "explanation_zh": "check out 在口语中表示去看看、体验一下某个地方，不是“检查”或“结账”的意思。"
+          },
+          {
+            "term": "haven't seen each other in ages",
+            "explanation_zh": "现在完成时描述从过去延续到现在的未见面状态；in ages 是口语夸张说法，表示很久。"
+          },
+          {
+            "term": "go with the flow",
+            "explanation_zh": "表示顺其自然、不做太多计划，常用于描述周末或旅行安排。"
+          }
+        ]
+      },
+      {
+        "title_en": "A Productive Weekend",
+        "title_zh": "学习充电型",
+        "answer_en": "I like to strike a balance between getting things done and taking it easy. On Saturday mornings, I usually spend a couple of hours studying or working on a personal project. Once that's out of the way, I can enjoy the rest of the weekend without feeling guilty about unfinished tasks.",
+        "answer_zh": "我喜欢在完成任务和放松之间找到平衡。周六早上，我通常会花几个小时学习或做自己的项目。等这些事处理完，我就可以安心享受剩下的周末，而不用因为任务没完成而有负担。",
+        "notes": [
+          {
+            "term": "strike a balance between A and B",
+            "explanation_zh": "表示在 A 和 B 之间取得平衡。between 后的两个部分通常采用平行结构，例如 getting things done 和 taking it easy。"
+          },
+          {
+            "term": "spend time doing something",
+            "explanation_zh": "表示花时间做某事，spend 后接时间，doing 表示具体活动，例如 spend two hours studying。"
+          },
+          {
+            "term": "once that's out of the way",
+            "explanation_zh": "once 引导时间状语从句，表示“一旦”；out of the way 指某件需要处理的事情已经完成、不再碍事。"
+          },
+          {
+            "term": "without feeling guilty about...",
+            "explanation_zh": "without 是介词，后接动名词 feeling；feel guilty about 表示因为某事感到内疚。"
+          }
+        ]
+      }
+    ]
   }
 ]
