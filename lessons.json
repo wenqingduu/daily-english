@@ -220,5 +220,87 @@
         ]
       }
     ]
+  },
+  {
+    "day": 4,
+    "date": "2026-11-23",
+    "topic_en": "Grocery Shopping & Cooking at Home",
+    "topic_zh": "买菜与在家做饭",
+    "question_en": "Do you usually cook at home or eat out? What do you do when you don't have much time to prepare a meal?",
+    "question_zh": "你通常在家做饭还是出去吃？如果没多少时间准备一顿饭，你会怎么做？",
+    "options": [
+      {
+        "title_en": "A Simple Home-Cooked Meal",
+        "title_zh": "简单的家常饭",
+        "answer_en": "I prefer cooking at home because I can decide exactly what goes into my food. I usually pick up a few fresh ingredients on my way back from work and throw together something simple, like noodles with vegetables. It doesn't have to be fancy as long as it tastes good and fills me up.",
+        "answer_zh": "我更喜欢在家做饭，因为我可以自己决定食物里放什么。我通常下班回家路上顺便买些新鲜食材，然后简单做点吃的，比如蔬菜面。只要好吃又能吃饱，就不一定非得做得很精致。",
+        "notes": [
+          {
+            "term": "what goes into my food",
+            "explanation_zh": "what 引导宾语从句，作 decide 的宾语；go into 在这里表示“被用作……的原料”，而不是字面上的“走进去”。"
+          },
+          {
+            "term": "pick up a few ingredients",
+            "explanation_zh": "pick up 在购物语境中表示顺便买、买一点东西，比 buy 更有随手采购的感觉。"
+          },
+          {
+            "term": "throw together something simple",
+            "explanation_zh": "throw together 表示用手头现有的东西快速做出某物，强调省时、不复杂。"
+          },
+          {
+            "term": "as long as it tastes good",
+            "explanation_zh": "as long as 引导条件状语从句，表示“只要……就……”。这里用一般现在时表达通常成立的条件。"
+          }
+        ]
+      },
+      {
+        "title_en": "A Quick Weeknight Dinner",
+        "title_zh": "工作日的快捷晚餐",
+        "answer_en": "On busy weekdays, I don't always have the energy to cook from scratch. I try to keep a few easy options in the fridge, so I can heat something up instead of ordering takeout every time. If I'm really pressed for time, I'll make a sandwich or scramble a couple of eggs. That usually does the trick.",
+        "answer_zh": "工作日忙的时候，我不一定有精力从头开始做饭。我会尽量在冰箱里备几样简单方便的食物，这样就能热一下吃，而不是每次都点外卖。如果时间实在很紧，我就做个三明治或者炒两个鸡蛋。这样通常就够了。",
+        "notes": [
+          {
+            "term": "cook from scratch",
+            "explanation_zh": "from scratch 表示从零开始、从最基本的原料做起。cook from scratch 就是不用现成半成品，从头做饭。"
+          },
+          {
+            "term": "instead of ordering takeout",
+            "explanation_zh": "instead of 表示“而不是”，其中 of 是介词，后接动名词 ordering。takeout 指外卖食物。"
+          },
+          {
+            "term": "be pressed for time",
+            "explanation_zh": "固定口语表达，表示时间紧迫、赶时间。例如：I'm pressed for time this morning.（我今天早上时间很紧。）"
+          },
+          {
+            "term": "do the trick",
+            "explanation_zh": "口语中表示奏效、达到预期目的。That usually does the trick 意思是“那样通常就能解决问题”。"
+          }
+        ]
+      },
+      {
+        "title_en": "Cooking as a Way to Unwind",
+        "title_zh": "把做饭当作放松",
+        "answer_en": "I actually enjoy cooking when I have some free time. I like looking up new recipes and trying them out on the weekend. Sometimes a dish doesn't turn out the way I expected, but that's part of the fun. I find it relaxing to put on some music and take my time in the kitchen.",
+        "answer_zh": "其实有空的时候我挺享受做饭的。我喜欢找些新菜谱，周末试着做一做。有时候成品和我想象的不太一样，但这也是乐趣的一部分。我觉得放点音乐，在厨房里慢慢做饭是一件很放松的事。",
+        "notes": [
+          {
+            "term": "look up new recipes",
+            "explanation_zh": "look up 表示查找资料或信息；recipe 是“菜谱”。look up a recipe 就是查菜谱。"
+          },
+          {
+            "term": "try them out",
+            "explanation_zh": "try out 表示实际试用、尝试某个方法或东西。这里 them 指前面的 recipes，代词作宾语时放在 try 和 out 之间。"
+          },
+          {
+            "term": "doesn't turn out the way I expected",
+            "explanation_zh": "turn out 表示最后结果如何；the way I expected 表示“像我预期的那样”，整个表达指结果不如预想。"
+          },
+          {
+            "term": "take my time",
+            "explanation_zh": "表示不着急、慢慢来。take one's time 是固定表达，不是“占用我的时间”。"
+          }
+        ]
+      }
+    ]
   }
 ]
