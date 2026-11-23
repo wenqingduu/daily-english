@@ -302,5 +302,87 @@
         ]
       }
     ]
+  },
+  {
+    "day": 5,
+    "date": "2026-11-24",
+    "topic_en": "Commuting & Getting Around",
+    "topic_zh": "通勤与日常出行",
+    "question_en": "How do you usually get to work or school? What do you like to do during your commute?",
+    "question_zh": "你通常怎么去上班或上学？通勤路上你喜欢做些什么？",
+    "options": [
+      {
+        "title_en": "Making the Most of the Ride",
+        "title_zh": "充分利用通勤时间",
+        "answer_en": "I usually take the subway because it's more reliable than driving during rush hour. The ride takes about half an hour, so I use that time to listen to an English podcast or review a few new words. It makes the commute feel a lot shorter, and I get a little learning done before the day even starts.",
+        "answer_zh": "我通常坐地铁，因为在早晚高峰时它比开车更可靠。车程大约半小时，所以我会利用这段时间听英语播客，或者复习几个新单词。这样通勤感觉短了很多，而且一天还没正式开始，我就已经学了一点东西。",
+        "notes": [
+          {
+            "term": "more reliable than driving",
+            "explanation_zh": "reliable 表示可靠、准时；more ... than ... 是比较级结构。than 后用 driving（动名词），与前面乘地铁的方式进行比较。"
+          },
+          {
+            "term": "during rush hour",
+            "explanation_zh": "rush hour 指上下班交通高峰期；during 后接名词，表示在某段时间内。"
+          },
+          {
+            "term": "use that time to listen to...",
+            "explanation_zh": "use something to do something 表示利用某物做某事；这里 to listen 是目的不定式，不是介词。"
+          },
+          {
+            "term": "get a little learning done",
+            "explanation_zh": "get something done 表示把某件事完成；a little learning 表示一点学习任务，强调利用零碎时间有所收获。"
+          }
+        ]
+      },
+      {
+        "title_en": "Keeping the Journey Stress-Free",
+        "title_zh": "让通勤轻松一点",
+        "answer_en": "I normally walk to work, which takes around twenty minutes. I actually enjoy having some quiet time before I get to the office. If the weather's nice, I'll take a slightly longer route through the park. I'd rather arrive a few minutes later than start my day feeling rushed.",
+        "answer_zh": "我一般步行上班，大概需要二十分钟。其实我很享受到办公室之前的这段安静时间。如果天气不错，我会稍微绕远一点，从公园穿过去。我宁愿晚几分钟到，也不想一大早就匆匆忙忙的。",
+        "notes": [
+          {
+            "term": "which takes around twenty minutes",
+            "explanation_zh": "which 引导非限制性定语从句，补充说明前面步行上班这件事所需的时间；逗号不能省略。"
+          },
+          {
+            "term": "have some quiet time",
+            "explanation_zh": "have some quiet time 表示享受一段安静、不被打扰的时间；some 用来表示不确定数量的时间。"
+          },
+          {
+            "term": "take a slightly longer route",
+            "explanation_zh": "slightly 修饰比较级 longer，表示稍微更长一点；take a route 表示选择或走某条路线。"
+          },
+          {
+            "term": "I'd rather ... than ...",
+            "explanation_zh": "I'd rather 是 I would rather 的缩写，表示宁愿……也不……；后面接动词原形，如 arrive 和 start。"
+          }
+        ]
+      },
+      {
+        "title_en": "Dealing with a Busy Commute",
+        "title_zh": "应对拥挤的通勤",
+        "answer_en": "My commute can be pretty hectic, especially when the buses are running late. I try to leave a bit earlier so I don't have to worry about being late. If I get stuck in traffic, I usually put on some music and remind myself there's no point in getting worked up over something I can't control.",
+        "answer_zh": "我的通勤有时挺折腾的，尤其是公交车晚点的时候。我会尽量早点出门，这样就不用担心迟到。如果遇到堵车，我通常会放点音乐，并提醒自己：对无法控制的事情生气也没什么用。",
+        "notes": [
+          {
+            "term": "can be pretty hectic",
+            "explanation_zh": "can be 表示有时可能会处于某种状态，不代表一直如此；pretty 在口语中可以表示相当、挺。"
+          },
+          {
+            "term": "so I don't have to worry about being late",
+            "explanation_zh": "so 引导结果或目的；worry about 后接动名词 being，表示担心迟到这件事。"
+          },
+          {
+            "term": "get stuck in traffic",
+            "explanation_zh": "固定搭配，表示被堵在路上；get stuck 强调陷入某种难以脱身的状态。"
+          },
+          {
+            "term": "there's no point in getting worked up",
+            "explanation_zh": "there's no point in doing something 表示做某事没有意义；get worked up 表示情绪激动、生气或焦虑。"
+          }
+        ]
+      }
+    ]
   }
 ]
