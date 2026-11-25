@@ -384,5 +384,91 @@
         ]
       }
     ]
+  },
+  {
+    "day": 6,
+    "date": "2026-11-25",
+    "topic_en": "Keeping in Touch with Friends",
+    "topic_zh": "与朋友保持联系",
+    "question_en": "How do you keep in touch with friends when life gets busy?",
+    "question_zh": "生活忙起来的时候，你是怎么和朋友保持联系的？",
+    "options": [
+      {
+        "title_en": "Little Things Go a Long Way",
+        "title_zh": "小小的举动也很有用",
+        "answer_en": "I don't always have time for a long conversation, but I try to check in with my friends every now and then. Sometimes I'll send them a funny video or a quick message just to let them know I'm thinking of them. It doesn't take much effort, but it goes a long way toward keeping us close.",
+        "answer_zh": "我不一定总有时间长聊，但我会尽量时不时问候一下朋友。有时我会给他们发个搞笑视频或简短的消息，只是想让他们知道我惦记着他们。这不需要花多少精力，却很有助于维持我们亲近的关系。",
+        "notes": [
+          {
+            "term": "don't always have time for",
+            "explanation_zh": "not always 表示并非总是，而不是从来不；have time for 后接名词，表示有时间做某事。"
+          },
+          {
+            "term": "check in with someone",
+            "explanation_zh": "主动联系某人，问问近况；every now and then 表示时不时。"
+          },
+          {
+            "term": "let them know I'm thinking of them",
+            "explanation_zh": "let + 宾语 + 动词原形；know 后接省略 that 的宾语从句。think of someone 在这里表示惦记某人。"
+          },
+          {
+            "term": "go a long way toward doing",
+            "explanation_zh": "表示对实现某个目标很有帮助；toward 是介词，后接动名词 keeping。"
+          }
+        ]
+      },
+      {
+        "title_en": "Making Time to Catch Up",
+        "title_zh": "专门抽时间叙旧",
+        "answer_en": "A few of my friends live in different cities, so getting together isn't always easy. We try to set aside some time for a video call once in a while. Even if we haven't spoken in weeks, we can usually pick up right where we left off. That's what I really value about those friendships.",
+        "answer_zh": "我的几个朋友住在不同的城市，所以见面并不总是容易。我们会尽量偶尔留出一点时间视频聊天。即使我们已经好几个星期没聊过，也通常能接着上次的话题自然地聊下去。这正是我特别珍惜这些友谊的地方。",
+        "notes": [
+          {
+            "term": "getting together isn't always easy",
+            "explanation_zh": "getting together 是动名词短语作主语，表示聚在一起、见面，谓语用单数 isn't。"
+          },
+          {
+            "term": "set aside some time for",
+            "explanation_zh": "特意留出时间给某项活动；once in a while 表示偶尔。"
+          },
+          {
+            "term": "even if we haven't spoken in weeks",
+            "explanation_zh": "even if 引导让步状语从句；现在完成时表示从过去到现在已有数周没有交谈。"
+          },
+          {
+            "term": "pick up right where we left off",
+            "explanation_zh": "表示从上次中断的地方继续；where 引导地点状语从句，right 强调恰好。"
+          }
+        ]
+      },
+      {
+        "title_en": "Being Understanding",
+        "title_zh": "理解彼此的忙碌",
+        "answer_en": "I've learned not to take it personally when someone takes a while to reply. Everyone has their own stuff going on, and I know I'm not great at replying straight away either. As long as we make an effort to be there for each other when it matters, I don't think we need to talk every single day.",
+        "answer_zh": "我已经学会了在别人过了一段时间才回复时，不把这件事当成针对自己。每个人都有自己的事情要忙，我也知道自己并不擅长马上回复消息。只要我们在重要的时候努力陪伴和支持彼此，我觉得就没必要每天都聊天。",
+        "notes": [
+          {
+            "term": "learned not to take it personally",
+            "explanation_zh": "learn not to do 表示学会不做某事；take it personally 表示把某件事理解为针对自己而感到受伤。"
+          },
+          {
+            "term": "takes a while to reply",
+            "explanation_zh": "take a while to do 表示做某事需要一段时间；someone 是单数，因此使用 takes。"
+          },
+          {
+            "term": "have their own stuff going on",
+            "explanation_zh": "口语中 stuff 泛指事情；going on 描述正在发生的事情，整句表示各自有事情要忙。"
+          },
+          {
+            "term": "not great at replying ... either",
+            "explanation_zh": "be great at doing 表示擅长做某事；either 放在否定句末尾，表示也不。"
+          },
+          {
+            "term": "as long as ... be there for each other",
+            "explanation_zh": "as long as 表示只要，引导条件状语从句；be there for someone 表示在某人需要时给予陪伴和支持。"
+          }
+        ]
+      }
+    ]
   }
 ]
