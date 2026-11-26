@@ -470,5 +470,115 @@
         ]
       }
     ]
+  },
+  {
+    "day": 7,
+    "date": "2026-11-26",
+    "topic_en": "Managing Screen Time",
+    "topic_zh": "管理手机使用时间",
+    "question_en": "Do you think you spend too much time on your phone? What do you do to cut down on screen time?",
+    "question_zh": "你觉得自己花在手机上的时间太多了吗？你会做些什么来减少屏幕使用时间？",
+    "options": [
+      {
+        "title_en": "Being More Aware",
+        "title_zh": "提高自我意识",
+        "answer_en": "I tend to reach for my phone whenever I have a spare moment. Before I know it, I've spent half an hour scrolling through social media. Lately, I've been trying to be more mindful of how I spend my time. Instead of checking my phone out of habit, I ask myself whether there's actually something I need to do.",
+        "answer_zh": "每当有一点空闲时间，我就习惯性地拿起手机。不知不觉间，我已经花了半个小时刷社交媒体。最近，我一直在努力更加留意自己是如何利用时间的。我不再习惯性地查看手机，而是问问自己是否真的有什么事情需要处理。",
+        "notes": [
+          {
+            "term": "tend to reach for my phone",
+            "explanation_zh": "tend to do 表示倾向于做某事；reach for 表示伸手去拿某物。"
+          },
+          {
+            "term": "whenever I have a spare moment",
+            "explanation_zh": "whenever 表示每当，引导时间状语从句；a spare moment 表示一点空闲时间。"
+          },
+          {
+            "term": "before I know it",
+            "explanation_zh": "固定口语表达，表示不知不觉间、还没反应过来。"
+          },
+          {
+            "term": "I've spent half an hour scrolling",
+            "explanation_zh": "spend + 时间 + doing 表示花费时间做某事。这里使用现在完成时，强调已经花掉的时间。"
+          },
+          {
+            "term": "I've been trying to",
+            "explanation_zh": "现在完成进行时，强调从过去持续到现在的努力。"
+          },
+          {
+            "term": "out of habit",
+            "explanation_zh": "出于习惯。这里的 out of 表示行为产生的原因或动机。"
+          }
+        ]
+      },
+      {
+        "title_en": "Setting Boundaries",
+        "title_zh": "设定使用界限",
+        "answer_en": "What works best for me is keeping my phone out of sight while I'm working. I also turn off notifications that aren't important so that I'm less tempted to check it. It took me a while to get used to it, but I've noticed that I can get a lot more done without constantly getting distracted.",
+        "answer_zh": "对我来说，最有效的方法是在工作时把手机放在看不见的地方。我也会关闭不重要的通知，这样就不太容易忍不住查看手机。我花了一段时间才适应，但我发现，在不频繁分心的情况下，我能够完成更多事情。",
+        "notes": [
+          {
+            "term": "what works best for me",
+            "explanation_zh": "what 引导主语从句，整体表示对我来说最有效的方法。"
+          },
+          {
+            "term": "keep my phone out of sight",
+            "explanation_zh": "keep + 宾语 + 宾语补足语，表示让某物保持某种状态；out of sight 表示在视线之外。"
+          },
+          {
+            "term": "so that I'm less tempted to check it",
+            "explanation_zh": "so that 引导目的状语从句；be tempted to do 表示忍不住想做某事。"
+          },
+          {
+            "term": "get used to it",
+            "explanation_zh": "表示逐渐适应某事。这里的 to 是介词，如果后面接动词，需要使用动名词形式。"
+          },
+          {
+            "term": "get a lot more done",
+            "explanation_zh": "get + 宾语 + 过去分词，这里表示完成更多事情。"
+          },
+          {
+            "term": "without constantly getting distracted",
+            "explanation_zh": "without 后接动名词；get distracted 表示变得分心。"
+          }
+        ]
+      },
+      {
+        "title_en": "Finding a Balance",
+        "title_zh": "寻找平衡",
+        "answer_en": "I wouldn't say that using my phone is necessarily a bad thing. It comes in handy when I need to look something up or stay in touch with people. The problem is when I end up using it just to kill time. Rather than giving it up altogether, I'd rather find a balance and make sure it doesn't get in the way of things that matter to me.",
+        "answer_zh": "我不会说使用手机就一定是一件坏事。当我需要查找信息或与他人保持联系时，手机非常方便。问题在于，我有时最后只是用它来打发时间。与其彻底放弃使用手机，我更愿意找到一种平衡，确保它不会妨碍那些对我而言重要的事情。",
+        "notes": [
+          {
+            "term": "I wouldn't say that ...",
+            "explanation_zh": "一种比较委婉的表达方式，表示我不认为……、我不会说……。"
+          },
+          {
+            "term": "not necessarily",
+            "explanation_zh": "表示不一定，而不是完全否定。"
+          },
+          {
+            "term": "come in handy",
+            "explanation_zh": "固定口语表达，表示派上用场、非常方便。"
+          },
+          {
+            "term": "end up doing",
+            "explanation_zh": "表示最终做了某事，通常强调实际结果与原本的计划不同。"
+          },
+          {
+            "term": "rather than giving it up altogether",
+            "explanation_zh": "rather than 表示而不是、与其；altogether 表示完全、彻底。"
+          },
+          {
+            "term": "I'd rather find a balance",
+            "explanation_zh": "I'd rather 是 I would rather 的缩写，后接动词原形，表示我更愿意……。"
+          },
+          {
+            "term": "get in the way of",
+            "explanation_zh": "表示妨碍、阻碍某事；things that matter to me 中的 that 引导定语从句，修饰 things。"
+          }
+        ]
+      }
+    ]
   }
 ]
