@@ -580,5 +580,111 @@
         ]
       }
     ]
+  },
+  {
+    "day": 8,
+    "date": "2026-11-27",
+    "topic_en": "Making Decisions",
+    "topic_zh": "日常决策",
+    "question_en": "How do you usually make decisions when you're not sure what to do?",
+    "question_zh": "当你不确定该怎么办时，你通常是如何做决定的？",
+    "options": [
+      {
+        "title_en": "Thinking Things Through",
+        "title_zh": "仔细权衡",
+        "answer_en": "I usually give myself some time to think things through. If it's a big decision, I try to weigh the pros and cons rather than rush into anything. Writing down my options helps me figure out what matters most to me. Once I've made up my mind, I try not to second-guess myself.",
+        "answer_zh": "我通常会给自己一些时间仔细考虑。如果是重大决定，我会尽量权衡利弊，而不是仓促行事。把各种选择写下来能帮助我弄清楚自己最看重什么。一旦下定决心，我就尽量不再反复怀疑自己的决定。",
+        "notes": [
+          {
+            "term": "think things through",
+            "explanation_zh": "表示把事情从头到尾考虑清楚；through 强调考虑的完整性。"
+          },
+          {
+            "term": "weigh the pros and cons",
+            "explanation_zh": "表示权衡利弊；weigh 在这里不是称重量，而是仔细衡量。"
+          },
+          {
+            "term": "rather than rush into anything",
+            "explanation_zh": "rather than 表示而不是；rush into 表示未经充分考虑就仓促做某事。"
+          },
+          {
+            "term": "figure out what matters most to me",
+            "explanation_zh": "figure out 表示弄清楚；what matters most to me 是宾语从句，what 在从句中作主语。"
+          },
+          {
+            "term": "once I've made up my mind",
+            "explanation_zh": "once 引导时间状语从句，表示一旦；现在完成时强调下定决心这一动作已经完成。make up one's mind 表示下定决心。"
+          },
+          {
+            "term": "second-guess myself",
+            "explanation_zh": "表示反复怀疑自己的判断或已经做出的决定。"
+          }
+        ]
+      },
+      {
+        "title_en": "Getting a Second Opinion",
+        "title_zh": "听取他人意见",
+        "answer_en": "When I'm torn between two options, I often talk it over with someone I trust. They might bring up something I haven't thought of. That doesn't mean I let other people decide for me, though. I just find it helpful to hear a different perspective before making the final call.",
+        "answer_zh": "当我在两个选择之间犹豫不决时，我经常会找一个信任的人商量。他们可能会提出一些我没想到的事情。不过，这并不意味着我让别人替我做决定。我只是觉得，在最终拍板之前听听不同的观点很有帮助。",
+        "notes": [
+          {
+            "term": "be torn between two options",
+            "explanation_zh": "表示在两个选择之间左右为难；torn 是 tear 的过去分词，这里描述内心纠结的状态。"
+          },
+          {
+            "term": "talk it over with someone",
+            "explanation_zh": "表示和某人充分讨论某件事；it 是代词，要放在 talk 和 over 之间。"
+          },
+          {
+            "term": "bring up something I haven't thought of",
+            "explanation_zh": "bring up 表示提出话题；I haven't thought of 是省略关系代词 that 的定语从句，修饰 something。"
+          },
+          {
+            "term": "That doesn't mean ... though",
+            "explanation_zh": "mean 后接省略 that 的宾语从句；though 放在句末表示不过，常用于口语转折。"
+          },
+          {
+            "term": "find it helpful to hear",
+            "explanation_zh": "find + it + 形容词 + 不定式；it 是形式宾语，真正的宾语是后面的 to hear 短语。"
+          },
+          {
+            "term": "make the final call",
+            "explanation_zh": "表示作出最终决定、最终拍板；call 在这里指判断或决定。"
+          }
+        ]
+      },
+      {
+        "title_en": "Learning by Doing",
+        "title_zh": "在行动中学习",
+        "answer_en": "I've realized that there's no point in waiting until I'm completely sure about everything. For smaller decisions, I'd rather give something a try and see how it goes. Even if things don't turn out the way I expected, I can always adjust along the way. Sometimes taking action is the only way to find out what works.",
+        "answer_zh": "我意识到，等到自己对所有事情都完全有把握是没有意义的。对于较小的决定，我更愿意先尝试一下，看看结果如何。即使事情没有像我预期的那样发展，我也可以在过程中随时调整。有时候，只有采取行动才能知道什么方法有效。",
+        "notes": [
+          {
+            "term": "there's no point in doing",
+            "explanation_zh": "表示做某事没有意义；in 是介词，后接动名词。"
+          },
+          {
+            "term": "I'd rather give something a try",
+            "explanation_zh": "would rather 后接动词原形，表示更愿意；give something a try 表示尝试一下某事。"
+          },
+          {
+            "term": "see how it goes",
+            "explanation_zh": "表示看看事情进展如何；how it goes 是宾语从句，使用陈述语序。"
+          },
+          {
+            "term": "turn out the way I expected",
+            "explanation_zh": "turn out 表示最终结果如何；the way I expected 表示按照我预期的方式。"
+          },
+          {
+            "term": "adjust along the way",
+            "explanation_zh": "along the way 表示在过程中、一路上；adjust 表示根据实际情况作出调整。"
+          },
+          {
+            "term": "the only way to find out what works",
+            "explanation_zh": "to find out 是修饰 way 的不定式；what works 是 find out 的宾语从句，表示什么方法有效。"
+          }
+        ]
+      }
+    ]
   }
 ]
