@@ -686,5 +686,111 @@
         ]
       }
     ]
+  },
+  {
+    "day": 9,
+    "date": "2026-11-28",
+    "topic_en": "Shopping & Spending Habits",
+    "topic_zh": "购物与消费习惯",
+    "question_en": "Are you an impulse shopper, or do you usually think carefully before buying something?",
+    "question_zh": "你是一个容易冲动购物的人，还是通常会在买东西之前仔细考虑？",
+    "options": [
+      {
+        "title_en": "Shopping with a Budget",
+        "title_zh": "理性消费",
+        "answer_en": "I try to stick to a budget, especially when it comes to clothes and electronics. If something catches my eye, I usually wait a few days before buying it. More often than not, I realize I can do without it. I'd rather save up for something I genuinely need than spend money on things I'll barely use.",
+        "answer_zh": "我尽量按预算消费，尤其是在买衣服和电子产品的时候。如果有什么东西吸引了我的注意，我通常会等几天再买。多数时候，我会发现自己其实不需要它。我宁愿攒钱买真正需要的东西，也不愿把钱花在几乎用不上的东西上。",
+        "notes": [
+          {
+            "term": "stick to a budget",
+            "explanation_zh": "表示坚持按预算消费；stick to 后接名词或动名词。"
+          },
+          {
+            "term": "when it comes to",
+            "explanation_zh": "表示谈到……、涉及……时；to 是介词。"
+          },
+          {
+            "term": "catch my eye",
+            "explanation_zh": "表示吸引我的注意力，尤其指视觉上引人注意。"
+          },
+          {
+            "term": "more often than not",
+            "explanation_zh": "表示多数时候，通常如此。"
+          },
+          {
+            "term": "do without it",
+            "explanation_zh": "表示没有它也能应付，即不需要它也可以。"
+          },
+          {
+            "term": "I'd rather ... than ...",
+            "explanation_zh": "表示宁愿做前者也不愿做后者，两边使用动词原形。"
+          }
+        ]
+      },
+      {
+        "title_en": "Choosing Quality",
+        "title_zh": "注重品质",
+        "answer_en": "I've become a bit more selective about what I buy over the years. I don't mind paying a little extra for something that's built to last. What puts me off is having to replace cheap things every few months. In the long run, buying fewer but better things can actually save me money.",
+        "answer_zh": "这些年来，我买东西变得更挑剔了一些。对于耐用的东西，我不介意多花一点钱。让我反感的是每隔几个月就得更换便宜的东西。从长远来看，少买一些但买得更好，实际上能帮我省钱。",
+        "notes": [
+          {
+            "term": "selective about what I buy",
+            "explanation_zh": "be selective about 表示对某事有所挑选；what I buy 是介词 about 的宾语从句。"
+          },
+          {
+            "term": "don't mind paying",
+            "explanation_zh": "mind 后接动名词，表示介意做某事；否定形式表示不介意。"
+          },
+          {
+            "term": "built to last",
+            "explanation_zh": "表示设计或制造得很耐用；to last 表示目的。"
+          },
+          {
+            "term": "What puts me off is ...",
+            "explanation_zh": "what 引导主语从句；put someone off 表示让某人失去兴趣或产生反感。"
+          },
+          {
+            "term": "having to replace",
+            "explanation_zh": "have to 表示不得不；having to replace 是动名词短语。"
+          },
+          {
+            "term": "in the long run",
+            "explanation_zh": "表示从长远来看，强调长期结果。"
+          }
+        ]
+      },
+      {
+        "title_en": "Enjoying Small Treats",
+        "title_zh": "偶尔奖励自己",
+        "answer_en": "I'm not against treating myself once in a while, as long as I can afford it. The trick is to tell the difference between something I really want and something I'm buying just because it's on sale. I've had my fair share of purchases I've regretted, so these days I try to be a little more intentional about spending.",
+        "answer_zh": "我并不反对偶尔犒劳一下自己，只要我负担得起。关键在于分清哪些东西是我真正想要的，哪些只是因为打折才买的。我也有过不少买完就后悔的经历，所以现在花钱时会尽量更有意识地作出选择。",
+        "notes": [
+          {
+            "term": "be against treating myself",
+            "explanation_zh": "be against 表示反对；against 是介词，后接动名词。treat oneself 表示犒劳自己。"
+          },
+          {
+            "term": "as long as I can afford it",
+            "explanation_zh": "as long as 引导条件状语从句；afford 表示负担得起。"
+          },
+          {
+            "term": "tell the difference between A and B",
+            "explanation_zh": "表示辨别 A 和 B 的区别；tell 在这里表示辨别。"
+          },
+          {
+            "term": "just because it's on sale",
+            "explanation_zh": "just because 表示仅仅因为；on sale 在这里表示打折出售。"
+          },
+          {
+            "term": "have my fair share of",
+            "explanation_zh": "表示经历过相当多的某类事情，并不一定指公平分配。"
+          },
+          {
+            "term": "be intentional about spending",
+            "explanation_zh": "表示有意识、有明确目的地消费；about 后接动名词。"
+          }
+        ]
+      }
+    ]
   }
 ]
